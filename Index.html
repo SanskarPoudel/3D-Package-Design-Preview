@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <link rel="Stylesheet" href="style.css" />
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <div class="uploadimg">
+      <h1>Select an image:</h1>
+      <input type="file" />
+    </div>
+
+    <script>
+      document.querySelector("input").onchange = handleImage;
+      function handleImage() {
+        var url = URL.createObjectURL(this.files[0]);
+        document.getElementById("img1").src = window.URL.createObjectURL(
+          this.files[0]
+        );
+        document.getElementById("img2").src = window.URL.createObjectURL(
+          this.files[0]
+        );
+        document.getElementById("img3").src = window.URL.createObjectURL(
+          this.files[0]
+        );
+        document.getElementById("img0").src = window.URL.createObjectURL(
+          this.files[0]
+        );
+        document.getElementById("img4").src = window.URL.createObjectURL(
+          this.files[0]
+        );
+      }
+    </script>
+
+    <div class="wrap">
+      <div class="cube">
+        <img id="img0" alt="" />
+
+        <img id="img4" alt="" />
+        <img id="img1" alt="" />
+        <img alt="" />
+        <img id="img2" alt="" />
+        <img id="img3" alt="" />
+        <img id="img0" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
