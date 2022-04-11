@@ -1,4 +1,4 @@
-:root {
+body {
   background: rgb(240, 234, 234);
 }
 .wrap {
@@ -75,7 +75,8 @@
   clip-path: inset(34.7% 0px 39.5% 0px);
 }
 .cube img:nth-child(4) {
-  transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(-100px) translateY(-100px);
+  clip-path: inset(15% 0px 24% 0px);
 }
 .cube img:nth-child(5) {
   transform: rotateX(270deg) translateX(0px) translateY(213px)
@@ -89,15 +90,15 @@
 
 @keyframes loop {
   from {
-    transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg) rotateZ(0deg);
   }
   to {
-    transform: rotateX(360deg) rotateY(360deg);
+    transform: rotateX(360deg) rotateZ(360deg);
   }
 }
 
 .cube {
-  animation: loop 10s linear infinite;
+  animation: loop 15s linear infinite;
 }
 
 .uploadimg {
